@@ -1,5 +1,5 @@
 // Trabalho 1
-// Oware Game
+// Jogo do Ouri
 // Sofia Teixeira - up201806629
 
 #include "pch.h"
@@ -36,14 +36,14 @@ COLOR CODES:
 int imprimir_tabuleiro(int pontos1, int pontos2, int tabuleiro[], size_t = 12)
 {
 	system("CLS");
-	cout << "________________________________________________OWARE GAME_______________________________________________\n\n\n";
-	cout << " _________________________________                                      _________________________________\n";
-	cout << "|   |                         |   |                                    |   |                         |   |\n";
-	cout << "|   | ("; cor(2); cout << tabuleiro[0]; cor(15); cout << ") ("; cor(2); cout << tabuleiro[1]; cor(15); cout << ") ("; cor(2); cout << tabuleiro[2]; cor(15); cout << ") ("; cor(2); cout << tabuleiro[3]; cor(15); cout << ") ("; cor(2); cout << tabuleiro[4]; cor(15); cout << ") ("; cor(2); cout << tabuleiro[5]; cor(15); cout << ") |   |          <-  "; cor(2); cout << "Jogador 1"; cor(15); cout << " ->          |   | ("; cor(2); cout << "a"; cor(15); cout << ") ("; cor(2); cout << "b"; cor(15); cout << ") ("; cor(2); cout << "c"; cor(15); cout << ") ("; cor(2); cout << "d"; cor(15); cout << ") ("; cor(2); cout << "e"; cor(15); cout << ") ("; cor(2); cout << "f"; cor(15); cout <<") |   |\n";
-	cout << "| "; cor(2); cout << pontos1; cor(15); cout << " |_________________________| "; cor(9); cout << pontos2; cor(15); cout << " |                                    | "; cor(2); cout << "0"; cor(15); cout << " |_________________________| "; cor(9); cout << "0"; cor(15); cout << " | \n";
-	cout << "|   |                         |   |                                    |   |                         |   |\n";
-	cout << "|   | ("; cor(9); cout << tabuleiro[11]; cor(15); cout << ") ("; cor(9); cout << tabuleiro[10]; cor(15); cout << ") ("; cor(9); cout << tabuleiro[9]; cor(15); cout << ") ("; cor(9); cout << tabuleiro[8]; cor(15); cout << ") ("; cor(9); cout << tabuleiro[7]; cor(15); cout << ") ("; cor(9); cout << tabuleiro[6]; cor(15); cout << ") |   |          <-  "; cor(9); cout << "Jogador 2"; cor(15); cout << " ->          |   | ("; cor(9); cout << "g"; cor(15); cout << ") ("; cor(9); cout << "h"; cor(15); cout << ") ("; cor(9); cout << "i"; cor(15); cout << ") ("; cor(9); cout << "j"; cor(15); cout << ") ("; cor(9); cout << "k"; cor(15); cout << ") ("; cor(9); cout << "l"; cor(15); cout << ") |   |\n";
-	cout << "|___|_________________________|___|                                    |___|_________________________|___|\n\n\n";
+	cout << "_______________________________________________________JOGO DO OURI_______________________________________________\n\n\n";
+	cout << " _________________________________________                                      _________________________________\n";
+	cout << "|    |                               |    |                                    |   |                         |   |\n";
+	cout << "|    | ("; cor(2);if (tabuleiro[0] >= 10) cout << tabuleiro[0]; else cout << "0" << tabuleiro[0]; cor(15); cout << ") ("; cor(2);if (tabuleiro[1] >= 10) cout << tabuleiro[1]; else cout << "0" << tabuleiro[1]; cor(15); cout << ") ("; cor(2);if (tabuleiro[2] >= 10) cout << tabuleiro[2]; else cout << "0" << tabuleiro[2]; cor(15); cout << ") ("; cor(2);if (tabuleiro[3] >= 10) cout << tabuleiro[3]; else cout << "0" << tabuleiro[3]; cor(15); cout << ") ("; cor(2);if (tabuleiro[4] >= 10) cout << tabuleiro[4]; else cout << "0" << tabuleiro[4]; cor(15); cout << ") ("; cor(2);if (tabuleiro[5] >= 10) cout << tabuleiro[5]; else cout << "0" << tabuleiro[5]; cor(15); cout << ") |    |          <-  "; cor(2); cout << "Jogador 1"; cor(15); cout << " ->          |   | ("; cor(2); cout << "a"; cor(15); cout << ") ("; cor(2); cout << "b"; cor(15); cout << ") ("; cor(2); cout << "c"; cor(15); cout << ") ("; cor(2); cout << "d"; cor(15); cout << ") ("; cor(2); cout << "e"; cor(15); cout << ") ("; cor(2); cout << "f"; cor(15); cout << ") |   |\n";
+	cout << "| "; cor(2); if (pontos1 >= 10) cout << pontos1; else cout << "0" << pontos1; cor(15); cout << " |_______________________________| "; cor(9); if (pontos2 >= 10) cout << pontos2; else cout << "0" << pontos2; cor(15); cout << " |                                    | "; cor(2); cout << "0"; cor(15); cout << " |_________________________| "; cor(9); cout << "0"; cor(15); cout << " | \n";
+	cout << "|    |                               |    |                                    |   |                         |   |\n";
+	cout << "|    | ("; cor(9); if (tabuleiro[11] >= 10) cout << tabuleiro[11]; else cout << "0" << tabuleiro[11]; cor(15); cout << ") ("; cor(9); if (tabuleiro[10] >= 10) cout << tabuleiro[10]; else cout << "0" << tabuleiro[10]; cor(15); cout << ") ("; cor(9); if (tabuleiro[9] >= 10) cout << tabuleiro[9]; else cout << "0" << tabuleiro[9]; cor(15); cout << ") ("; cor(9); if (tabuleiro[8] >= 10) cout << tabuleiro[8]; else cout << "0" << tabuleiro[8]; cor(15); cout << ") ("; cor(9); if (tabuleiro[7] >= 10) cout << tabuleiro[7]; else cout << "0" << tabuleiro[7]; cor(15); cout << ") ("; cor(9); if (tabuleiro[6] >= 10) cout << tabuleiro[6]; else cout << "0" << tabuleiro[6]; cor(15); cout << ") |    |          <-  "; cor(9); cout << "Jogador 2"; cor(15); cout << " ->          |   | ("; cor(9); cout << "g"; cor(15); cout << ") ("; cor(9); cout << "h"; cor(15); cout << ") ("; cor(9); cout << "i"; cor(15); cout << ") ("; cor(9); cout << "j"; cor(15); cout << ") ("; cor(9); cout << "k"; cor(15); cout << ") ("; cor(9); cout << "l"; cor(15); cout << ") |   |\n";
+	cout << "|____|_______________________________|____|                                    |___|_________________________|___|\n\n\n";
 
 	return 0;
 }
@@ -196,15 +196,7 @@ int verificacao(char casa, int jogador, int tabuleiro[], size_t = 12)
 
 int jogada(int pontos1, int pontos2, int jogador, int tabuleiro[], size_t = 12)
 {
-	// Verificar se o jogo acabou ou se ficou empatado
-	if (pontos1 >= 25)
-		return 1;
-	else if (pontos2 >= 25)
-		return 2;
-	else if (pontos1 == 24 && pontos2 == 24)
-		return 0;
-
-	while (pontos1 <= 24 && pontos2 <= 24)
+	while (pontos1 <= 25 && pontos2 <= 25)
 	{
 		char casa;
 		int escolha;
@@ -221,49 +213,64 @@ int jogada(int pontos1, int pontos2, int jogador, int tabuleiro[], size_t = 12)
 		}
 		cor(15);
 		cout << ") - ";
-		
+
 		// Este ciclo serve para tratar os dados caso o input dado pelo utilizador não seja válido (validado na função verificacao que retorna -1 se houver um erro)
 		do      // assegura que faz (pelo menos) uma vez
 		{
 			cin >> casa;
 			escolha = verificacao(casa, jogador, tabuleiro, 12);
-		}
-		while (escolha == -1);
+		} while (escolha == -1);
 
-		int i = tabuleiro[escolha];
-		int n_pecas = tabuleiro[escolha]; //criei variáveis iguais com nomes diferentes porque o i vai iterar, mas o n_pecas deverá ficar constante
+		int casa_inicial = escolha;
+		int n_pecas = tabuleiro[escolha];
 		tabuleiro[escolha] = 0;
-			
-		for (i; i > 0; i--) //para andar no sentido contrário ao do ponteiro dos relógios
+		int casa_final = casa_inicial;
+
+
+		for (n_pecas; n_pecas > 0; n_pecas--) //para andar no sentido contrário ao do ponteiro dos relógios
 		{
-			/*if (n_pecas >= 12)   //passar à frente a casa escolhida se esta tiver 12 ou mais peças 
-				continue;*/
 			escolha -= 1;
+			if (escolha == casa_inicial)			//Se a casa inicial tiver 12 ou mais sementes ignora-se essa casa
+			{
+				n_pecas += 1;
+				continue;
+			}
 			if (escolha < 0)
 				escolha = 11;
 			tabuleiro[escolha] += 1;
+			casa_final -= 1;			//esta casa vai ser importante para fazer a recolha de pontos
+			if (casa_final < 0)
+				casa_final = 11;
 		}
 
 
 		//fazer a recolha de pontos
-		if (jogador == 1)
+		int j;
+		j = casa_final;
+		if (tabuleiro[casa_final] == 2 || tabuleiro[casa_final] == 3)
 		{
-			for (i; i <= 5 ; i++)
-				if (tabuleiro[i] == 2 || tabuleiro[i] == 3)
-				{
-					pontos1 += tabuleiro[i];
-					tabuleiro[i] = 0;
-				}
+			if (jogador == 1 && casa_final >= 6 && casa_final <= 11)
+			{
+				for (j; (j >= 6 && j <= 11); j++)
+					if (tabuleiro[j] == 2 || tabuleiro[j] == 3)
+					{
+						pontos1 += tabuleiro[j];
+						tabuleiro[j] = 0;
+					}
+					else break;
+			}
+			else if (jogador == 2 && casa_final >= 0 && casa_final < 6)
+			{
+				for (j; (j >= 0 && j < 6); j++)
+					if (tabuleiro[j] == 2 || tabuleiro[j] == 3)
+					{
+						pontos2 += tabuleiro[j];
+						tabuleiro[j] = 0;
+					}
+					else break;
+			}
 		}
-		else if (jogador == 2)
-		{
-			for (i; (i >= 6 && i <= 11); i++)
-				if (tabuleiro[i] == 2 || tabuleiro[i] == 3)
-				{
-					pontos2 += tabuleiro[i];
-					tabuleiro[i] = 0;
-				}
-		}
+
 
 		imprimir_tabuleiro(pontos1, pontos2, tabuleiro, 12);
 
@@ -272,6 +279,15 @@ int jogada(int pontos1, int pontos2, int jogador, int tabuleiro[], size_t = 12)
 			jogador = 2;
 		else
 			jogador = 1;
+	
+
+		// Verificar se o jogo acabou ou se ficou empatado
+		if ((pontos1 > pontos2) && (pontos1 == 25))
+			return 1;
+		else if ((pontos2 > pontos1) && (pontos2 == 25))
+			return 2;
+		else if ((pontos1 == pontos2) && (pontos1 == 24))
+			return 0;
 
 	}
 }
@@ -280,10 +296,10 @@ int jogada(int pontos1, int pontos2, int jogador, int tabuleiro[], size_t = 12)
 
 int main()
 {
-	cout << "OWARE GAME";
+	cout << "_______________________________________________________JOGO DO OURI_______________________________________________\n\n";
 	cout << "O jogador a iniciar o jogo é o ";
 	cor(2);
-	cout << "Jogador 1\n";
+	cout << "Jogador 1\n\n";
 	cor(15);
 	system("PAUSE");     //pausa o ecrã e só continua quando se clica numa tecla
 	system("CLS");       //limpa o ecrã
@@ -297,6 +313,7 @@ int main()
 	imprimir_tabuleiro(pontos_jogador1, pontos_jogador2, tabuleiro_inicial, 12);
 	int vencedor = jogada(pontos_jogador1, pontos_jogador2, 1,tabuleiro_inicial, 12);
 
+	//Anuncia o vencedor do jogador (ou se é empate)
 	system("CLS");
 	if (vencedor == 1)
 	{
