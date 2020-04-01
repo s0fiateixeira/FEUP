@@ -324,8 +324,11 @@ int jogada_sozinho(int pontos1, int pontos2, int jogador, int tabuleiro[], size_
 			cout << "Computador";
 			cor(15);
 			cout << " está a escolher a peça...\n";
-			srand(time(0));            // time(0) refere-se ao tempo atual, portanto a função rand vai gerar números diferentes de cada vez
-			escolha = (rand() % 6 + 6);			// gera um número aleatório entre 6 e 11
+			do
+			{
+				srand(time(0));            // time(0) refere-se ao tempo atual, portanto a função rand vai gerar números diferentes de cada vez
+				escolha = (rand() % 6 + 6);			// gera um número aleatório entre 6 e 11
+			} while (tabuleiro[escolha] == 0);
 		}
 
 		int casa_inicial = escolha;
