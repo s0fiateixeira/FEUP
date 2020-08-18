@@ -8,7 +8,7 @@
 #include <time.h>
 using namespace std;
 
-void cor(unsigned int color) //Parte de cï¿½digo fornecida pelo professor para manipular cor do texto na consola
+void cor(unsigned int color) //Parte de código fornecida pelo professor para manipular cor do texto na consola
 {
 	HANDLE hCon = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(hCon, color);
@@ -33,7 +33,7 @@ COLOR CODES:
 }
 
 
-// Funï¿½ï¿½o que se encarrega de dar print ao tabuleiro com as cores indicadas
+// Função que se encarrega de dar print ao tabuleiro com as cores indicadas
 int imprimir_tabuleiro(int pontos1, int pontos2, int tabuleiro[], size_t = 12)
 {
 	system("CLS");
@@ -50,17 +50,17 @@ int imprimir_tabuleiro(int pontos1, int pontos2, int tabuleiro[], size_t = 12)
 }
 
 
-// Funï¿½ï¿½o que se encarrega de traduzir as letras que o utilizador coloca para parï¿½metros e verificar se o input estï¿½ correto
+// Função que se encarrega de traduzir as letras que o utilizador coloca para parâmetros e verificar se o input está correto
 int verificacao(char casa, int jogador,char modo_de_jogo, int tabuleiro[], size_t = 12)
 {
-	//verificar se a casa escolhida pelo jogador 1 ï¿½ vï¿½lida
+	//verificar se a casa escolhida pelo jogador 1 é válida
 	if (jogador == 1)
 	{
 		if (casa == 'a' || casa == 'A')
 		{
-			if (tabuleiro[0] == 0)     //verificar se a casa escolhida estï¿½ vazia
+			if (tabuleiro[0] == 0)     //verificar se a casa escolhida está vazia
 			{
-				cout << "Nï¿½o pode escolher uma casa sem sementes!!!\n Tente novamente: ";
+				cout << "Não pode escolher uma casa sem sementes!!!\n Tente novamente: ";
 				return(-1);
 			}
 			return 0;
@@ -69,7 +69,7 @@ int verificacao(char casa, int jogador,char modo_de_jogo, int tabuleiro[], size_
 		{
 			if (tabuleiro[1] == 0)
 			{
-				cout << "Nï¿½o pode escolher uma casa sem sementes!!!\n Tente novamente: ";
+				cout << "Não pode escolher uma casa sem sementes!!!\n Tente novamente: ";
 				return(-1);
 			}
 			return 1;
@@ -78,7 +78,7 @@ int verificacao(char casa, int jogador,char modo_de_jogo, int tabuleiro[], size_
 		{
 			if (tabuleiro[2] == 0)
 			{
-				cout << "Nï¿½o pode escolher uma casa sem sementes!!!\n Tente novamente: ";
+				cout << "Não pode escolher uma casa sem sementes!!!\n Tente novamente: ";
 				return(-1);
 			}
 			return 2;
@@ -87,7 +87,7 @@ int verificacao(char casa, int jogador,char modo_de_jogo, int tabuleiro[], size_
 		{
 			if (tabuleiro[3] == 0)
 			{
-				cout << "Nï¿½o pode escolher uma casa sem sementes!!!\n Tente novamente: ";
+				cout << "Não pode escolher uma casa sem sementes!!!\n Tente novamente: ";
 				return(-1);
 			}
 			return 3;
@@ -96,7 +96,7 @@ int verificacao(char casa, int jogador,char modo_de_jogo, int tabuleiro[], size_
 		{		
 			if(tabuleiro[4] == 0)
 			{
-				cout << "Nï¿½o pode escolher uma casa sem sementes!!!\n Tente novamente: ";
+				cout << "Não pode escolher uma casa sem sementes!!!\n Tente novamente: ";
 				return(-1);
 			}
 			return 4;
@@ -105,7 +105,7 @@ int verificacao(char casa, int jogador,char modo_de_jogo, int tabuleiro[], size_
 		{		
 			if (tabuleiro[5] == 0)
 			{
-				cout << "Nï¿½o pode escolher uma casa sem sementes!!!\n Tente novamente: ";
+				cout << "Não pode escolher uma casa sem sementes!!!\n Tente novamente: ";
 				return(-1);
 			}
 			return 5;
@@ -113,30 +113,30 @@ int verificacao(char casa, int jogador,char modo_de_jogo, int tabuleiro[], size_
 		else if (casa == 'g' || casa == 'G' || casa == 'h' || casa == 'H' || casa == 'i' || casa == 'I' || casa == 'j' || casa == 'J' || casa == 'k' || casa == 'K' || casa == 'l' || casa == 'L')
 		{
 			if (modo_de_jogo == 'a')
-				cout << "Nï¿½o pode escolher casas do Jogador 2!!\n Tente novamente: ";
+				cout << "Não pode escolher casas do Jogador 2!!\n Tente novamente: ";
 			else if (modo_de_jogo == 's')
-				cout << "Nï¿½o pode escolher casas do Computador!!\n Tente novamente: ";
+				cout << "Não pode escolher casas do Computador!!\n Tente novamente: ";
 			return(-1);
 		}
 		else
 		{
-			cout << "Casa invï¿½lida!!!\n Tente novamente: ";
+			cout << "Casa inválida!!!\n Tente novamente: ";
 			return(-1);
 		}
 	}
-	//verificar se a casa escolhida pelo jogador 2 ï¿½ vï¿½lida
+	//verificar se a casa escolhida pelo jogador 2 é válida
 	else if (jogador == 2)
 	{
 		if (casa == 'a' || casa == 'A' || casa == 'b' || casa == 'B' || casa == 'c' || casa == 'C' || casa == 'd' || casa == 'D' || casa == 'e' || casa == 'E' || casa == 'f' || casa == 'F')
 		{
-			cout << "Nï¿½o pode escolher casas do Jogador 1!!\n Tente novamente: ";
+			cout << "Não pode escolher casas do Jogador 1!!\n Tente novamente: ";
 			return(-1);
 		}
 		else if (casa == 'g' || casa == 'G')
 		{
 			if (tabuleiro[11] == 0)
 			{
-				cout << "Nï¿½o pode escolher uma casa sem sementes!!!\n Tente novamente: ";
+				cout << "Não pode escolher uma casa sem sementes!!!\n Tente novamente: ";
 				return(-1);
 			}
 			return 11;
@@ -145,7 +145,7 @@ int verificacao(char casa, int jogador,char modo_de_jogo, int tabuleiro[], size_
 		{
 			if (tabuleiro[10] == 0)
 			{
-				cout << "Nï¿½o pode escolher uma casa sem sementes!!!\n Tente novamente: ";
+				cout << "Não pode escolher uma casa sem sementes!!!\n Tente novamente: ";
 				return(-1);
 			}
 			return 10;
@@ -154,7 +154,7 @@ int verificacao(char casa, int jogador,char modo_de_jogo, int tabuleiro[], size_
 		{
 			if (tabuleiro[9] == 0)
 			{
-				cout << "Nï¿½o pode escolher uma casa sem sementes!!!\n Tente novamente: ";
+				cout << "Não pode escolher uma casa sem sementes!!!\n Tente novamente: ";
 				return(-1);
 			}
 			return 9;
@@ -163,7 +163,7 @@ int verificacao(char casa, int jogador,char modo_de_jogo, int tabuleiro[], size_
 		{
 			if (tabuleiro[8] == 0)
 			{
-				cout << "Nï¿½o pode escolher uma casa sem sementes!!!\n Tente novamente: ";
+				cout << "Não pode escolher uma casa sem sementes!!!\n Tente novamente: ";
 				return(-1);
 			}
 			return 8;
@@ -172,7 +172,7 @@ int verificacao(char casa, int jogador,char modo_de_jogo, int tabuleiro[], size_
 		{
 			if (tabuleiro[7] == 0)
 			{
-				cout << "Nï¿½o pode escolher uma casa sem sementes!!!\n Tente novamente: ";
+				cout << "Não pode escolher uma casa sem sementes!!!\n Tente novamente: ";
 				return(-1);
 			}
 			return 7;
@@ -181,14 +181,14 @@ int verificacao(char casa, int jogador,char modo_de_jogo, int tabuleiro[], size_
 		{
 			if (tabuleiro[6] == 0)
 			{
-				cout << "Nï¿½o pode escolher uma casa sem sementes!!!\n Tente novamente: ";
+				cout << "Não pode escolher uma casa sem sementes!!!\n Tente novamente: ";
 				return(-1);
 			}
 			return 6;
 		}
 		else
 		{
-			cout << "Casa invï¿½lida!!!\n Tente novamente: ";
+			cout << "Casa inválida!!!\n Tente novamente: ";
 			return(-1);
 		}
 	}
@@ -202,7 +202,7 @@ int jogada_amigo(int pontos1, int pontos2, int jogador, int tabuleiro[], size_t 
 	{
 		char casa;
 		int escolha;
-		cout << "UTILIZA AS LETRAS DO TABULEIRO DO LADO COMO REFERï¿½NCIA\n";
+		cout << "UTILIZA AS LETRAS DO TABULEIRO DO LADO COMO REFERÊNCIA\n";
 		cout << "Escolhe a casa (";     //dar print com cor adequada
 		if (jogador == 1) {
 			cor(2);
@@ -216,7 +216,7 @@ int jogada_amigo(int pontos1, int pontos2, int jogador, int tabuleiro[], size_t 
 		cor(15);
 		cout << ") - ";
 
-		// Este ciclo serve para tratar os dados caso o input dado pelo utilizador nï¿½o seja vï¿½lido (validado na funï¿½ï¿½o verificacao que retorna -1 se houver um erro)
+		// Este ciclo serve para tratar os dados caso o input dado pelo utilizador não seja válido (validado na função verificacao que retorna -1 se houver um erro)
 		do      // assegura que faz (pelo menos) uma vez
 		{
 			cin >> casa;
@@ -229,7 +229,7 @@ int jogada_amigo(int pontos1, int pontos2, int jogador, int tabuleiro[], size_t 
 		int casa_final = casa_inicial;
 
 
-		for (n_pecas; n_pecas > 0; n_pecas--) //para andar no sentido contrï¿½rio ao do ponteiro dos relï¿½gios
+		for (n_pecas; n_pecas > 0; n_pecas--) //para andar no sentido contrário ao do ponteiro dos relógios
 		{
 			escolha -= 1;
 			if (escolha == casa_inicial)			//Se a casa inicial tiver 12 ou mais sementes ignora-se essa casa
@@ -304,13 +304,13 @@ int jogada_sozinho(int pontos1, int pontos2, int jogador, int tabuleiro[], size_
 		int escolha;
 		if (jogador == 1)
 		{
-			cout << "UTILIZA AS LETRAS DO TABULEIRO DO LADO COMO REFERï¿½NCIA\n";
+			cout << "UTILIZA AS LETRAS DO TABULEIRO DO LADO COMO REFERÊNCIA\n";
 			cout << "Escolhe a casa (";     //dar print com cor adequada
 			cor(2);
 			cout << "Jogador";
 			cor(15);
 			cout << ") - ";
-			// Este ciclo serve para tratar os dados caso o input dado pelo utilizador nï¿½o seja vï¿½lido (validado na funï¿½ï¿½o verificacao que retorna -1 se houver um erro)
+			// Este ciclo serve para tratar os dados caso o input dado pelo utilizador não seja válido (validado na função verificacao que retorna -1 se houver um erro)
 			do      // assegura que faz (pelo menos) uma vez
 			{
 				cin >> casa;
@@ -323,11 +323,11 @@ int jogada_sozinho(int pontos1, int pontos2, int jogador, int tabuleiro[], size_
 			cor(9);
 			cout << "Computador";
 			cor(15);
-			cout << " estï¿½ a escolher a peï¿½a...\n";
+			cout << " está a escolher a peça...\n";
 			do
 			{
-				srand(time(0));            // time(0) refere-se ao tempo atual, portanto a funï¿½ï¿½o rand vai gerar nï¿½meros diferentes de cada vez
-				escolha = (rand() % 6 + 6);			// gera um nï¿½mero aleatï¿½rio entre 6 e 11
+				srand(time(0));            // time(0) refere-se ao tempo atual, portanto a função rand vai gerar números diferentes de cada vez
+				escolha = (rand() % 6 + 6);			// gera um número aleatório entre 6 e 11
 			} while (tabuleiro[escolha] == 0);
 		}
 
@@ -337,7 +337,7 @@ int jogada_sozinho(int pontos1, int pontos2, int jogador, int tabuleiro[], size_
 		int casa_final = casa_inicial;
 
 
-		for (n_pecas; n_pecas > 0; n_pecas--) //para andar no sentido contrï¿½rio ao do ponteiro dos relï¿½gios
+		for (n_pecas; n_pecas > 0; n_pecas--) //para andar no sentido contrário ao do ponteiro dos relógios
 		{
 			escolha -= 1;
 			if (escolha == casa_inicial)			//Se a casa inicial tiver 12 ou mais sementes ignora-se essa casa
@@ -418,32 +418,32 @@ int inicio_do_jogo(char modo_jogo)
 		cor(4);
 		cout << "Objetivo";
 		cor(15);
-		cout << " - O jogo comeï¿½a com 4 sementes em cada casa. O objetivo do jogo ï¿½\n   capturar o maior nï¿½mero de sementes do jogador adversï¿½rio. Como sï¿½o 48 sementes\n   no total, basta capturar 25 para ganhar o jogo, sendo, no entanto, possï¿½vel\n   empatar uma partida.\n";
+		cout << " - O jogo começa com 4 sementes em cada casa. O objetivo do jogo é\n   capturar o maior número de sementes do jogador adversário. Como são 48 sementes\n   no total, basta capturar 25 para ganhar o jogo, sendo, no entanto, possível\n   empatar uma partida.\n";
 		cor(4);
 		cout << "Semear";
 		cor(15);
-		cout << " - Os jogadores tï¿½m turnos para mover as sementes.Numa jogada um jogador\n   escolhe uma das 6 casas no seu controlo (da respetiva cor). As sementes dessa casa\n   sï¿½o todas removidas e distribuï¿½das deixando cair uma em cada casa no sentido\n   contrï¿½rio ao dos ponteiros de um relï¿½gio, num processo chamado semear. As sementes\n   nï¿½o sï¿½o distribuï¿½das nas casas de pontuaï¿½ï¿½o (nas pontas do tabuleiro) nem na casa\n   onde as sementes sï¿½o retiradas inicialmente (esta tem de permanecer vazia durante a\n   jogada, mesmo contendo 12 ou mais sementes, sendo passada ï¿½ frente). Sabendo o nï¿½mero\n   de sementes de cada casa ï¿½ importante jogar com estratï¿½gia!\n";
+		cout << " - Os jogadores têm turnos para mover as sementes.Numa jogada um jogador\n   escolhe uma das 6 casas no seu controlo (da respetiva cor). As sementes dessa casa\n   são todas removidas e distribuídas deixando cair uma em cada casa no sentido\n   contrário ao dos ponteiros de um relógio, num processo chamado semear. As sementes\n   não são distribuídas nas casas de pontuação (nas pontas do tabuleiro) nem na casa\n   onde as sementes são retiradas inicialmente (esta tem de permanecer vazia durante a\n   jogada, mesmo contendo 12 ou mais sementes, sendo passada à frente). Sabendo o número\n   de sementes de cada casa é importante jogar com estratégia!\n";
 		cor(4);
 		cout << "Capturar";
 		cor(15);
-		cout << " - para se capturar as sementes do adversï¿½rio, esta terï¿½ de ter 2 ou 3\n   sementes na ï¿½ltima casa jogada, apï¿½s este ter acabado de semear. Assim, este\n   captura as sementes da ï¿½ltima casa jogada e possivelmente mais, se as casas\n   anteriores tambï¿½m tiverem 2 ou 3 sementes, atï¿½ que se encontre uma casa do adversï¿½rio\n   que nï¿½o tenha este nï¿½mero de sementes ou atï¿½ chegar a uma casa do prï¿½prio jogador.\n   As sementes capturadas sï¿½o colocadas automaticamente na casa de pontuaï¿½ï¿½o do jogador\n   que estï¿½ a jogar.Cada jogador deve ter em consideraï¿½ï¿½o que a sua jogada deve ser feita\n   para deixar que o adversï¿½rio possa continuar a jogar. Isto ï¿½, se o jogador adversï¿½rio\n   tiver as casas todas vazias, o jogador atual deve mover as sementes de maneira a permitir\n   a jogada seguinte.\n\n\n";
+		cout << " - para se capturar as sementes do adversário, esta terá de ter 2 ou 3\n   sementes na última casa jogada, após este ter acabado de semear. Assim, este\n   captura as sementes da última casa jogada e possivelmente mais, se as casas\n   anteriores também tiverem 2 ou 3 sementes, até que se encontre uma casa do adversário\n   que não tenha este número de sementes ou até chegar a uma casa do próprio jogador.\n   As sementes capturadas são colocadas automaticamente na casa de pontuação do jogador\n   que está a jogar.Cada jogador deve ter em consideração que a sua jogada deve ser feita\n   para deixar que o adversário possa continuar a jogar. Isto é, se o jogador adversário\n   tiver as casas todas vazias, o jogador atual deve mover as sementes de maneira a permitir\n   a jogada seguinte.\n\n\n";
 		system("PAUSE");
 		return -1;						// Retorna -1 para que continue a perguntar ao jogador quais dos modos este prefere jogar
 	}
 	else if (modo_jogo == 'S' || modo_jogo == 's')					//Joga no modo sozinho
 	{
 		system("CLS");
-		cout << "ï¿½s tu a iniciar o jogo. Vais jogar como ";
+		cout << "És tu a iniciar o jogo. Vais jogar como ";
 		cor(2);
 		cout << "Jogador";
 		cor(15);
-		cout << ". O teu adversï¿½rio ï¿½ o ";
+		cout << ". O teu adversário é o ";
 		cor(9);
 		cout << "Computador";
 		cor(15);
 		cout << ". Boa sorte!\n\n";
-		system("PAUSE");     //pausa o ecrï¿½ e sï¿½ continua quando se clica numa tecla
-		system("CLS");       //limpa o ecrï¿½
+		system("PAUSE");     //pausa o ecrã e só continua quando se clica numa tecla
+		system("CLS");       //limpa o ecrã
 
 		//tabuleiro inicial
 		int tabuleiro_inicial[12] = { 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 };
@@ -454,13 +454,13 @@ int inicio_do_jogo(char modo_jogo)
 		imprimir_tabuleiro(pontos_jogador1, pontos_jogador2, tabuleiro_inicial, 12);
 		int vencedor = jogada_sozinho(pontos_jogador1, pontos_jogador2, 1, tabuleiro_inicial, 12);
 
-		//Anuncia o vencedor do jogador (ou se ï¿½ empate)
+		//Anuncia o vencedor do jogador (ou se é empate)
 		system("CLS");
 		if (vencedor == 1)
 		{
 			cout << "Ganhaste a partida! ";
 			cor(2);
-			cout << "PARABï¿½NS";
+			cout << "PARABÉNS";
 			cor(15);
 			cout << "!!!";
 		}
@@ -470,7 +470,7 @@ int inicio_do_jogo(char modo_jogo)
 			cor(9);
 			cout << "Computador";
 			cor(15);
-			cout << " ganhou a partida! Tenta ganhar na prï¿½xima vez!";
+			cout << " ganhou a partida! Tenta ganhar na próxima vez!";
 		}
 		else if (vencedor == 0)
 		{
@@ -488,12 +488,12 @@ int inicio_do_jogo(char modo_jogo)
 	else if (modo_jogo == 'A' || modo_jogo == 'a')							// Joga no modo com amigo
 	{
 		system("CLS");
-		cout << "O jogador a iniciar o jogo ï¿½ o ";
+		cout << "O jogador a iniciar o jogo é o ";
 		cor(2);
 		cout << "Jogador 1\n\n";
 		cor(15);
-		system("PAUSE");     //pausa o ecrï¿½ e sï¿½ continua quando se clica numa tecla
-		system("CLS");       //limpa o ecrï¿½
+		system("PAUSE");     //pausa o ecrã e só continua quando se clica numa tecla
+		system("CLS");       //limpa o ecrã
 
 		//tabuleiro inicial
 		int tabuleiro_inicial[12] = { 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 };
@@ -504,7 +504,7 @@ int inicio_do_jogo(char modo_jogo)
 		imprimir_tabuleiro(pontos_jogador1, pontos_jogador2, tabuleiro_inicial, 12);
 		int vencedor = jogada_amigo(pontos_jogador1, pontos_jogador2, 1, tabuleiro_inicial, 12);
 
-		//Anuncia o vencedor do jogador (ou se ï¿½ empate)
+		//Anuncia o vencedor do jogador (ou se é empate)
 		system("CLS");
 		if (vencedor == 1)
 		{
@@ -512,7 +512,7 @@ int inicio_do_jogo(char modo_jogo)
 			cor(2);
 			cout << "Jogador 1";
 			cor(15);
-			cout << " ganhou a partida! PARABï¿½NS!!!";
+			cout << " ganhou a partida! PARABÉNS!!!";
 		}
 		else if (vencedor == 2)
 		{
@@ -520,7 +520,7 @@ int inicio_do_jogo(char modo_jogo)
 			cor(9);
 			cout << "Jogador 2";
 			cor(15);
-			cout << " ganhou a partida! PARABï¿½NS!!!";
+			cout << " ganhou a partida! PARABÉNS!!!";
 		}
 		else if (vencedor == 0)
 		{
@@ -538,7 +538,7 @@ int inicio_do_jogo(char modo_jogo)
 	}
 	else
 	{
-		cout << "A opï¿½ï¿½o que escolheu nï¿½o ï¿½ vï¿½lida! Tente novamente: \n";
+		cout << "A opção que escolheu não é válida! Tente novamente: \n";
 		system("PAUSE");
 		return -1;
 	}
@@ -551,12 +551,12 @@ int main()
 {
 	char modo_jogo;
 	int modo;
-	// Este ciclo serve para tratar os dados caso o input dado pelo utilizador nï¿½o seja vï¿½lido (validado na funï¿½ï¿½o inicio_do_jogo que retorna -1 se houver um erro)
+	// Este ciclo serve para tratar os dados caso o input dado pelo utilizador não seja válido (validado na função inicio_do_jogo que retorna -1 se houver um erro)
 	do      // assegura que faz (pelo menos) uma vez
 	{
 		system("CLS");
 		cout << "_______________________________________________________JOGO DO OURI__________________________________________________\n\n";
-		cout << "Escolhe a opï¿½ï¿½o que preferes!!!!\n";
+		cout << "Escolhe a opção que preferes!!!!\n";
 		cout << "Rever as regras do Jogo    -     R\n";
 		cout << "Jogar sozinho              -     S\n";
 		cout << "Jogar com um amigo         -     A\n\n";

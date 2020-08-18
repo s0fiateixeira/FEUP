@@ -1,6 +1,7 @@
 // PROG - 09/03/2020 - TPC2
 // Ficha2 - Ex7
 // up201806629
+// não acabado - a) acabado - resto não
 
 #include "pch.h"
 #include <iostream>
@@ -10,18 +11,22 @@ using namespace std;
 
 int Ex_2_7_a()
 {
-	int i, number, modules;
+	int i, number;
+	bool isPrime = true;
 
-	modules = 0;
-	cout << "Which number do you want?";
+	cout << "Which number do you want to check? ";
 	cin >> number;
-
+	
 	for (i = 2; i <= sqrt(number); i++)
 	{
-		modules += (i % number);
+		if (number % i == 0)
+		{
+			isPrime = false;
+			break;
+		}
 	}
 
-	if (modules == 0)
+	if (isPrime == true)
 	{
 		cout << "It is a prime number";
 	}
@@ -49,6 +54,29 @@ int Ex_2_7_b()
 		{
 			cout << i << "\n";
 		}
+	}
+	int i, number;
+	bool isPrime = true;
+
+	cout << "Which number do you want to check? ";
+	cin >> number;
+	
+	for (i = 2; i <= sqrt(number); i++)
+	{
+		if (number % i == 0)
+		{
+			isPrime = false;
+			break;
+		}
+	}
+
+	if (isPrime == true)
+	{
+		cout << "It is a prime number";
+	}
+	else
+	{
+		cout << "It is NOT a prime number";
 	}
 
 
@@ -80,7 +108,7 @@ int Ex_2_7_c()
 
 int Ex_2_7_d()
 {
-	int i, modules, prime_numbers, tamanho, largest_number;
+	/*int i, modules, prime_numbers, tamanho, largest_number;
 
 	modules = 0;
 	prime_numbers = 0;
@@ -97,7 +125,7 @@ int Ex_2_7_d()
 		}
 		prime_numbers += 1;
 	}
-
+	*/
 	return 0;
 }
 
@@ -105,10 +133,10 @@ int Ex_2_7_d()
 
 int main()
 {
-	//Ex_2_7_a();
+	Ex_2_7_a();
 	//Ex_2_7_b();
 	//Ex_2_7_c();
-	Ex_2_7_d();
+	//Ex_2_7_d();
 	return 0;
 }
 

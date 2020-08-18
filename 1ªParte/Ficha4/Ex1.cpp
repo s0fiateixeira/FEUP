@@ -1,6 +1,7 @@
 // PROG - 17/03/2020 - TP4
 // Ficha4 - Ex1
 // up201806629
+// alínea a e b completas; alínea c por completar
 
 #include "pch.h"
 #include <iostream>
@@ -16,9 +17,10 @@ using namespace std;
 
 void readArray(int a[], size_t nElem)
 {
-	cout << "Choose the elements (must be integer numbers!!)";
+	cout << "Choose the elements (must be integer numbers!!)\n";
 	for (int i = 0; i <= (nElem-1); i++)
 	{
+		cout << i << " -> ";
 		cin >> a[i];
 	}
 
@@ -37,20 +39,93 @@ void readArray(int a[], size_t nElem)
 
 int findValueInArray(const int a[], size_t nElem, int value, size_t pos1, size_t pos2)
 {
-	for (int i = pos1; i <= (pos2-1); i++)
+	
+	for (int i = pos1; i <= pos2; i++)
 	{
-		
+		if (a[i] == value)
+			return i;
 	}
+	return -1;
+}
+
+bool Test(const int a[], size_t nElem, int value, size_t pos1, size_t pos2)
+{
+	// Ficha4 - Ex. 1.a)
+	cout << "____________________TESTING FIRST PROGRAM____________________";
+	int nTests;
+	cout << "How many times do you want to test the first program? ";
+	cin >> nTests;
+	for (int j = 0; j <= nTests; j++)
+	{
+		cout << "_______________________________________________Try number " << j;
+		int len;
+		cout << "How many elements do you want? ";
+		cin >> len;
+		int a[1000];
+		readArray(a, len);
+	}
+
+
+	// Ficha4 - Ex. 1.b)
+	int pos1, pos2, value, len;
+	int a[1000];
+	cout << "How many elements do you want in your array? ";
+	cin >> len;
+	cout << "Choose the elements (must be integer numbers!!)\n";
+	for (int i = 0; i <= (len - 1); i++)
+	{
+		cout << i << " -> ";
+		cin >> a[i];
+	}
+	cout << "Which is the value you are looking for? ";
+	cin >> value;
+	cout << "Which index do you want to start the search? ";
+	cin >> pos1;
+	cout << "Which index do you want to finish the search? ";
+	cin >> pos2;
+	cout << "\nThe index is: " << findValueInArray(a, len, value, pos1, pos2);
+
 
 }
 
 
+
 int main()
-{int len;
-cout << "How many elements do you want? ";
-cin >> len;
+{
+	/*
+	// Ficha4 - Ex. 1.a)
+	int len;
+	cout << "How many elements do you want? ";
+	cin >> len;
 	int a[1000];
 	readArray(a, len);
+	*/
+
+
+
+	// Ficha4 - Ex. 1.b)
+	int pos1, pos2, value, len;
+	int a[1000];
+	cout << "How many elements do you want in your array? ";
+	cin >> len;
+	cout << "Choose the elements (must be integer numbers!!)\n";
+	for (int i = 0; i <= (len - 1); i++)
+	{
+		cout << i << " -> ";
+		cin >> a[i];
+	}
+	cout << "Which is the value you are looking for? ";
+	cin >> value;
+	cout << "Which index do you want to start the search? ";
+	cin >> pos1;
+	cout << "Which index do you want to finish the search? ";
+	cin >> pos2;
+	cout << "\nThe index is: " << findValueInArray(a, len, value, pos1, pos2);
+
+
+
+
+
 
 	return 0;
 }
