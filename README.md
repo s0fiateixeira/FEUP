@@ -4,5 +4,4 @@
 * Weekly programming exercises
 * Project 1
 
-The exercises are poorly developed and some of them may not be finished\
 2019/20
